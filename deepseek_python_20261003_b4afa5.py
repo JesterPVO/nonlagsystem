@@ -20,10 +20,10 @@ from telegram.ext import (
 )
 
 # ⚠️ SECURITY WARNING: Never hardcode bot tokens directly in your scripts.
-TOKEN = os.environ.get("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
+TOKEN = os.environ.get("BOT_TOKEN", "8840533970:AAHTyeUf6KS5IqM3by--GMsS1mzECEjdczA")
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "ahadop123")
 
-if not TOKEN or TOKEN == "YOUR_BOT_TOKEN_HERE":
+if not TOKEN or TOKEN == "8840533970:AAHTyeUf6KS5IqM3by--GMsS1mzECEjdczA":
     raise ValueError(
         "BOT_TOKEN environment variable is missing or using default placeholder! "
         "Set it in your environment before running."
