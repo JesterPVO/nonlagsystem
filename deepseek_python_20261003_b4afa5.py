@@ -19,11 +19,11 @@ from telegram.ext import (
     filters,
 )
 
-# ⚠️ SECURITY WARNING: Never hardcode bot tokens directly in your scripts.
+# Set bot token directly
 TOKEN = os.environ.get("BOT_TOKEN", "8840533970:AAHTyeUf6KS5IqM3by--GMsS1mzECEjdczA")
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "ahadop123")
 
-if not TOKEN or TOKEN == "8840533970:AAHTyeUf6KS5IqM3by--GMsS1mzECEjdczA":
+if not TOKEN or TOKEN == "YOUR_BOT_TOKEN_HERE":
     raise ValueError(
         "BOT_TOKEN environment variable is missing or using default placeholder! "
         "Set it in your environment before running."
@@ -494,7 +494,7 @@ async def editstart_router(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if data == "editstart_text":
         context.user_data["editstart_state"] = "await_text"
         await query.edit_message_text(
-            "✏️ Send the new *text* for the start message (plain text).",
+            "✏️️ Send the new *text* for the start message (plain text).",
             parse_mode="Markdown",
         )
         return
